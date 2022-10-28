@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lan="en">         
+    <body>
+      <P>Click the button to get your coordinates.</P>
+      <button 
+      onclick="getlocation()">try it</button>
+      <P id="demo"></P> 
+    <script>
+    var x=document.getelementbyid("demo");
+    function getlocation()
+    {
+      if (navigator.geolocation){
+        navigator.geolocation.getcurrentposition(showposition);
+      }
+      else{
+        x.innerhtml = "geolocation is not supported in this browser.";
+      }
+    }
+    function
+    showposition(position){
+      x.innerhtml = "latitude: " + 
+    position.coords.latitude +
+   "<br>longitude: " + position.cooords.longitude;  
+   }
+   function showError(error){
+    switch (error.code){
+      case 
+      error.position_Denied:
+      x.innerhtml = "User denied the request for Geolocation"
+      break;
+      case
+      error.position_unavailable:
+      x.innerhtml = "location information is unavailable."
+      break;
+      case error.Timeout:
+        x.innerhtml = "The request to get user location timed out."
+        break;
+        case error.unknown_error:
+          x.innerhtml = "An unknown error occured."
+          break;  
+
+    }
+   }
+   </script>
+     
+</body>
+
+
+   
+</html>

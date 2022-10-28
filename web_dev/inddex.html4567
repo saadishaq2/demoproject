@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lan="en">         
+    <body>
+      <h1>Textarea</h1>
+      <p>The textarea element defines a multi-line input field. </p>
+        <form 
+        action="/action_page.php">
+        <fieldset> 
+          <legend>Personalia:
+          </legend>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname"
+          value="saad"><br>
+          <label for="lname">Last name</label><br>
+          <input type="text" name="lname" id="lname"
+          value="Ishaq"><br><br>
+          <input type="submit">
+        </fieldset>
+         
+       
+      </form>
+          
+        
+      
+</body>
+
+
+   
+</html>
